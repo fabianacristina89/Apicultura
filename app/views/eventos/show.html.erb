@@ -1,0 +1,27 @@
+<%- model_class = @evento.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:data_prevista) %>:</strong></dt>
+  <dd><%= @evento.data_prevista %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:data_realizada) %>:</strong></dt>
+  <dd><%= @evento.data_realizada %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @evento.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_evento_id) %>:</strong></dt>
+  <dd><%= @evento.tipo_evento.nome %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              eventos_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_evento_path(@evento), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              evento_path(@evento),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_prevista: 2012-06-24
+  data_realizada: 2012-06-24
+  status: MyString
+  tipo_evento: 
+
+two:
+  data_prevista: 2012-06-24
+  data_realizada: 2012-06-24
+  status: MyString
+  tipo_evento: 
